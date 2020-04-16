@@ -9,7 +9,7 @@ services:
             context: ./front
             dockerfile: Dockerfile
         environment:
-            BACK_URI: server:3000
+            BACK_URI: server:4000
         ports: ['5000:5000'] # host:container
         depends_on:
             - server
@@ -25,8 +25,8 @@ services:
             dockerfile: Dockerfile
         environment:
             MONGO_URI: mongodb://mongodb:27017/api
-            PORT: 3000
-        ports: ['3000:3000'] # host:container
+            PORT: 4000
+        ports: ['4000:4000'] # host:container
         depends_on:
             - mongodb
         networks:

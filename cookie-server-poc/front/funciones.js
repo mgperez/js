@@ -10,8 +10,11 @@ $(document).ready(function(){
 
 	const login = function(data) {
 		//const url = 'http://localhost:3000/api/login'
-		//const url = 'http://' + backURI + '/api/login'
-		const url = 'http://' + 'server:3000' + '/api/login'
+		//const url = 'http://' + 'server:3000' + '/api/login'
+		
+		//Init backURI
+		const backURI = process.env.BACK_URI;
+		const url = 'http://' + backURI + '/api/login'
 		$.post( url, data, function(response){
 			console.log(response)
 			location.href = '/dashboard.html'
