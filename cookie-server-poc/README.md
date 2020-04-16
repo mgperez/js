@@ -23,4 +23,4 @@ $> docker-compose ps
 
 ### Error CORS
 
-![image-error-CORS](/../image-error-CORS.png)
+ ![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gdvn4luxqkj30od0eaq55.jpg)
