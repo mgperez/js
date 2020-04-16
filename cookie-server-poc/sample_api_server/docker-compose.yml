@@ -1,27 +1,12 @@
-version: '2.3'
+version: '3.7'
 
 services:
-    front:
-        image: cookiespoc/front
-        container_name: front
-        tty: true # Needed to ensure container doesn't self terminate
-        build:
-            context: ./front
-            dockerfile: Dockerfile
-        environment:
-            BACK_URI: server:3000
-        ports: ['5000:5000'] # host:container
-        depends_on:
-            - server
-        networks:
-            - quarkus
-            
     server:
         image: flacatus/server
         container_name: server
         tty: true # Needed to ensure container doesn't self terminate
         build:
-            context: ./sample_api_server
+            context: .
             dockerfile: Dockerfile
         environment:
             MONGO_URI: mongodb://mongodb:27017/api
@@ -43,10 +28,13 @@ services:
             - mongodb_data_container:/data/db
         networks:
             - quarkus
+    
+    # https://dev.to/sonyarianto/how-to-spin-mongodb-server-with-docker-and-docker-compose-2lef
+    # https://www.thepolyglotdeveloper.com/2019/01/getting-started-mongodb-docker-container-deployment/
 
 volumes:
   mongodb_data_container:
-              
+
 networks:
     quarkus:
         driver: bridge

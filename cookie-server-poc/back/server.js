@@ -6,7 +6,7 @@ const cors         = require('cors');
 
 //Init app
 const server = express();
-//const router       = express.Router();
+const router       = express.Router();
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
 

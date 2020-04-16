@@ -5,11 +5,14 @@ $(document).ready(function(){
 		let username = $('#exampleInputEmail1').val()
 		let password = $('#exampleInputPassword1').val()
 
-		login({user: username, pass: password})
+		login({email: username, password: password})
 	});
 
 	const login = function(data) {
-		$.post( "http://localhost:4000/login", data, function(response){
+		//const url = 'http://localhost:3000/api/login'
+		//const url = 'http://' + backURI + '/api/login'
+		const url = 'http://' + 'server:3000' + '/api/login'
+		$.post( url, data, function(response){
 			console.log(response)
 			location.href = '/dashboard.html'
 		}, 'json').fail(function(error){
