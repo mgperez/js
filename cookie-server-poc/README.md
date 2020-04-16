@@ -4,7 +4,7 @@ Starts to containers for a service.
 $> docker-compose up
 ```
 
-![](/Users/marcialgarciaperez/github/mgperez/js/cookie-server-poc/images/image-docker-compose-up.png)
+![image-docker-compose-up](/Users/marcialgarciaperez/github/mgperez/js/cookie-server-poc/images/image-docker-compose-up.png)
 
 Lists containers.
 
@@ -12,10 +12,10 @@ Lists containers.
 $> docker-compose ps
 ```
 
-![](/Users/marcialgarciaperez/github/mgperez/js/cookie-server-poc/images/image-docker-compose-ps.png)
+![image-docker-compose-ps](/Users/marcialgarciaperez/github/mgperez/js/cookie-server-poc/images/image-docker-compose-ps.png)
 
 
 
 ### Error CORS
 
- ![](/Users/marcialgarciaperez/github/mgperez/js/cookie-server-poc/images/image-error-CORS.png)
+ ![image-error-CORS](/Users/marcialgarciaperez/github/mgperez/js/cookie-server-poc/images/image-error-CORS.png)
