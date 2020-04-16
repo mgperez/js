@@ -2,11 +2,28 @@ const path = require('path')
 const express = require('express');
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
+const cors         = require('cors');
+
+//Init app
 const server = express();
+//const router       = express.Router();
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
+
+
+//Routes
+//require('./lib/coins')(router);
+
+//Middleware body-parser
 server.use(cookieParser())
 server.use(bodyParser.urlencoded({ extended: false }))
+server.use(bodyParser.json());
+
+
+//Cors to allow external connections
+server.options('*',cors());
+
+//Port declaration and listening
 const port = 4000;
 
 // server.get("/", (req, res) => {
